@@ -1,0 +1,29 @@
+
+<ion-view ng-controller="appHome" ng-init="load()">
+  <ion-header-bar align-title="left" class="bar-positive">
+    <h1 class="title">IC Messenger</h1>
+    <div class="buttons">
+      <button class="button" ng-click="logout()">Logout</button>
+    </div>
+  </ion-header-bar>
+  <ion-content class="has-header">
+    <ion-list class="list">
+		<!-- changed ng-repeat -> collection-repeat -->
+	    <ion-item class="item item-avatar" collection-repeat="message in messages">
+			<img src="{{message.image}}">
+			<h2>{{message.name}}</h2>
+			<p class="wrap">{{message.message}}</p>
+		</ion-item>
+	</ion-list>
+    <br style="clear:both" />
+    <br style="clear:both" />
+  </ion-content>
+  <!-- ion-tab directives go here -->
+  </ion-tabs>
+  <div class="bar bar-footer bar-dark item-input-inset">
+    <label class="item-input-wrapper">
+      <input type="search" ng-model="messageText" placeholder="Hey there, ...">
+    </label>
+    <button id="send" ng-click="send(messageText)" class="button button-icon button-dark icon"></button>
+  </div>
+</ion-view>

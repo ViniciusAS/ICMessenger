@@ -1,0 +1,10 @@
+{
+  "name" : "icmessengerserver",
+  "version" : "1.0.0",
+  "repository" : "NONE",
+  "license" : "ISC",
+  "description" : "ICMessenger server: A server for An Ionic project",
+  "dependencies" : {
+    "socket.io" : "^1.0.0"
+  }
+}
